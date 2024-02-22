@@ -17,4 +17,5 @@ FetchContent_MakeAvailable(cpp-header-only-sample-library)
 add_executable(${PROJECT_NAME} src/app.cpp)
 target_link_libraries(${PROJECT_NAME} sample::sample)
 target_include_directories(${PROJECT_NAME} INTERFACE $<BUILD_INTERFACE:${cpp-sample-library_SOURCE_DIR}/include>)
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
 
